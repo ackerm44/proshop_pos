@@ -1,0 +1,8 @@
+.Sidebar {
+  margin: 30px; 
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 50px;
+  text-align: center;
+}

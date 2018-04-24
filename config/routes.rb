@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :transactions
   scope '/api' do
     resources :products
     resources :departments

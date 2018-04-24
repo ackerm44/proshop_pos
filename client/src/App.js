@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Register from './containers/register/register'
+import Sidebar from './containers/sidebar/sidebar'
+import Total from './containers/total/total'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <p>Ledge Meadows POS</p>
+        <div className="Main">
+          <Sidebar />
+          <div className="Register">
+            <Register />
+            <Total />
+          </div>
+        </div>
       </div>
     );
   }
