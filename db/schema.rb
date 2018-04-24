@@ -10,11 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_23_210122) do
+ActiveRecord::Schema.define(version: 2018_04_24_193940) do
 
   create_table "departments", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_sales", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "sale_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -25,6 +32,13 @@ ActiveRecord::Schema.define(version: 2018_04_23_210122) do
     t.decimal "tax_percent", precision: 3, scale: 2, default: "0.0"
     t.decimal "price", precision: 6, scale: 2
     t.integer "department_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sales", force: :cascade do |t|
+    t.decimal "total", precision: 6, scale: 2
+    t.decimal "total_tax", precision: 6, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
